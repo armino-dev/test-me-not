@@ -10,7 +10,7 @@ No usage at all.
 ## Installation
 
 There was too much white space here, so here it is another paragraph to cover the space.
-I put here some emoticons, also :smiley:.
+I put here some emoticons, too. :smiley:
 
 
 ## Final notes
