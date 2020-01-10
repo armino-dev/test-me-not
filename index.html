@@ -18,6 +18,18 @@
 <script type="text/javascript">
   $(() => {
     $('div#dummy-content').text('<p>Ready to start DOM manipulation.</p>');
+    setTimeout( () => {
+        //flash dummy content using fadeOut and fadeIn
+        $('div#dummy-content')
+            .fadeOut(100)
+            .fadeIn(100)
+            .fadeOut(100)
+            .fadeIn(100)
+            .fadeOut(100, () => {
+               //remove it from DOM
+               $('div#dummy-content').remove(); 
+            });        
+    }, 1000 );
   });
 </script>
 </html>
