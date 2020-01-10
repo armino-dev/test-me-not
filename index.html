@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>test-me-not demo</title>
+</head>
+
+<body>
+  <header>
+    <h1>test-me-not demo</h1>
+    <div id="dummy-content">Awaiting content</div>
+  </header>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(() => {
+    $('div#dummy-content').text('<p>Ready to start DOM manipulation.</p>');
+    setTimeout( () => {
+        //flash dummy content using fadeOut and fadeIn
+        $('div#dummy-content')
+            .fadeOut(100)
+            .fadeIn(100)
+            .fadeOut(100)
+            .fadeIn(100)
+            .fadeOut(100, () => {
+               //remove it from DOM
+               $('div#dummy-content').remove(); 
+            });        
+    }, 1000 );
+  });
+</script>
+</html>
