@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>test-me-not demo</title>
+    <style>
+        #dummy-content{padding:10px; font-size:1.2rem; background-color:#efefef;}
+    </style>
 </head>
 
 <body>
@@ -17,17 +20,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript">
   $(() => {
-    $('div#dummy-content').text('<p>Ready to start DOM manipulation.</p>');
+    let dummyContent = $('div#dummy-content');
+    dummyContent.html('<p>Ready to start DOM manipulation.</p>');
     setTimeout( () => {
         //flash dummy content using fadeOut and fadeIn
-        $('div#dummy-content')
+        dummyContent
             .fadeOut(100)
             .fadeIn(100)
             .fadeOut(100)
             .fadeIn(100)
             .fadeOut(100, () => {
                //remove it from DOM
-               $('div#dummy-content').remove(); 
+               dummyContent.remove();
             });        
     }, 1000 );
   });
