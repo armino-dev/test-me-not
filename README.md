@@ -4,7 +4,7 @@ A completely useless app.
 
 ## Usage
 
-Since is a completely useless app, I have added here a totally useless paragraph.
+Since this is a completely useless app, I have added here a totally useless paragraph.
 No usage at all.
 
 ## Installation
